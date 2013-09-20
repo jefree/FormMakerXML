@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+
+
+<data>
+	<empleado>
+		<id tipo="numerico" ext="20" unico="true"/>
+		<nombre tipo="cadena" ext="35"/>
+		<apellido tipo="cadena" ext="35"/>
+		<cargo tipo="numerico" ext="1" relacion="cargo" campo="id"/>
+		<telefono tipo="cadena" ext="15"/>
+		<correo tipo="cadena" ext="100" validador="mail"/>
+		<direccion tipo="cadena" ext="100"/> 
+	</empleado>
+
+	<cargo>	
+		<id tipo="numerico" ext="1" unico="true"/>
+		<nombre tipo="cadena" ext="25"/>
+	</cargo>
+</data>
