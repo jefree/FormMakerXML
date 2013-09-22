@@ -11,6 +11,7 @@
 
 <head>
 	<title>EJERCICIO XML</title>
+	<link rel="stylesheet" href="css/bootstrap.css">
 </head>
 
 <body>
@@ -22,14 +23,14 @@
 		foreach ($doc as $element) {
 			
 			
-			echo "<h1>",$element->getName(),"</h1>";
+			echo "<h3>",strtoupper($element->getName()),"</h3>";
 			echo "<form>";
 
 			foreach ($element as $field) {
 
-				echo "<div><input ";
+				echo "<div> <label for='", $field->getName(), "'>",$field->getName(),"</label>";
 
-				echo "id='", $field->.getName(), "' ";
+				echo "<input id='", $field->getName(), "' ";
 
 				if ($field->attributes()["validador"]) {
 
@@ -42,10 +43,10 @@
 					echo "type='", $tipos[(string)$t], "' ";
 				}
 
-				echo "/>";
-				echo "<label for='", $field->getName()
+				echo ">";
+				echo "</div>";
 			}
-
+			echo "<button type= 'submit' class='btn btn-primary'>Guardar</button>";
 			echo "</from>";
 
 		}
